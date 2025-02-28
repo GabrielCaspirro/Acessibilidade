@@ -3,44 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ouvindo Com Os Olhos</title>
+    <title>Além do Som</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>Ouvindo Com Os Olhos</h1>
-        <nav>
-            <p><a href="#videos">Coloque seu vídeo!</a></p>
-            <p><a href="#sobre">Sobre</a></p>
-        </nav>
+        <div>
+            <h1>Além do Som</h1>
+            <nav>
+                <p><a href="#videos">Coloque seu vídeo!</a></p>
+                <p><a href="#sobre">Sobre</a></p>
+            </nav>
+        </div>
     </header>
 
-    <div id="videos">
-        <section class="upload-video">
-            <h2>Envie um vídeo do seu computador</h2>
-            <video id="uploadedVideo" controls></video>
-            <div class = "buttons">
-                <input id="videoFile" type="file" accept="video/*">
-                <button id="uploadBtn">Enviar</button>
-            </div>
-        </section>
+    <div id="banner">
+        <img src="img/Banner.png" alt="">
     </div>
-    
-    <div id="sobre" class="textos">
-        <section  class="info-aud">
-            <h1>Sobre a deficiência</h1>
-            <p>Perda de audição total ou significativa.
-                A surdez geralmente resulta de danos no nervo ou no ouvido interno. Pode ser causada por um defeito congênito, lesão, doença, certos medicamentos, exposição a ruído alto ou desgaste relacionado à idade.
-                O principal sintoma é a incapacidade de ouvir sons.
-                Em alguns casos, cirurgia ou o uso de um aparelho auditivo podem restaurar a audição. Habilidades de leitura labial, texto escrito e língua de sinais podem ajudar com a comunicação.</p>
-        </section>
-        <section class="info-aud">
-            <h1>Sobre a deficiência</h1>
-            <p>Perda de audição total ou significativa.
-                A surdez geralmente resulta de danos no nervo ou no ouvido interno. Pode ser causada por um defeito congênito, lesão, doença, certos medicamentos, exposição a ruído alto ou desgaste relacionado à idade.
-                O principal sintoma é a incapacidade de ouvir sons.
-                Em alguns casos, cirurgia ou o uso de um aparelho auditivo podem restaurar a audição. Habilidades de leitura labial, texto escrito e língua de sinais podem ajudar com a comunicação.</p>
-        </section>
+
+    <div class="container">
+        <div id="videos">
+            <section class="upload-video">
+                <h2>Envie um vídeo do seu computador</h2>
+                <video id="uploadedVideo" controls></video>
+                <div class = "buttons">
+                    <input id="videoFile" type="file" accept="video/*">
+                    <button id="uploadBtn">Enviar</button>
+                </div>
+            </section>
+        </div>
+        
+        <div id="sobre" class="textos">
+            <section  class="info-aud">
+                <h1>Sobre a deficiência</h1>
+                <p>Perda de audição total ou significativa.
+                    A surdez geralmente resulta de danos no nervo ou no ouvido interno. Pode ser causada por um defeito congênito, lesão, doença, certos medicamentos, exposição a ruído alto ou desgaste relacionado à idade.
+                    O principal sintoma é a incapacidade de ouvir sons.
+                    Em alguns casos, cirurgia ou o uso de um aparelho auditivo podem restaurar a audição. Habilidades de leitura labial, texto escrito e língua de sinais podem ajudar com a comunicação.</p>
+            </section>
+            <section class="info-aud">
+                <h1>Sobre a deficiência</h1>
+                <p>Perda de audição total ou significativa.
+                    A surdez geralmente resulta de danos no nervo ou no ouvido interno. Pode ser causada por um defeito congênito, lesão, doença, certos medicamentos, exposição a ruído alto ou desgaste relacionado à idade.
+                    O principal sintoma é a incapacidade de ouvir sons.
+                    Em alguns casos, cirurgia ou o uso de um aparelho auditivo podem restaurar a audição. Habilidades de leitura labial, texto escrito e língua de sinais podem ajudar com a comunicação.</p>
+            </section>
+        </div>
     </div>
     
     <script src="script/script.js"></script>

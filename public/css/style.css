@@ -5,6 +5,104 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+  height:100%;
+}
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  
+  /* Ajuste da lista de navegação */
+  nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    padding: 10px 20px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    color: rgb(12, 159, 204);
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Efeito ao passar o mouse */
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(3, 133, 165, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Evita que o conteúdo fique escondido atrás do menu */
+  body {
+    padding-top: 60px;
+  }
+  
+  /* Responsividade para dispositivos menores */
+  @media (max-width: 768px) {
+    nav {
+      padding: 15px 0;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      display: none; /* Esconde o menu no mobile */
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+  
+    nav ul li {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    /* Menu hamburguer */
+    .menu-toggle {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+  
+    .menu-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  
+    /* Mostrar menu quando ativado */
+    .menu-active nav ul {
+      display: flex;
+    }
+  }
+  
+
+
+
 video {
     width: 80%;
     max-width: 800px;
@@ -13,38 +111,6 @@ video {
     background: black; 
     margin: auto;
     margin-top: 10px;
-}
-
-
-header{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(245, 245, 245);
-    padding: 10px;
-    align-items: center;
-    justify-content: space-around;
-}
-
-nav {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-nav a {
-    text-decoration: none;
-    font-size: 1.4rem;
-    color: #000000; 
-    white-space: nowrap;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: transform 0.4s ease-in-out; 
-}
-
-nav p:hover {
-    transform: scale(1.03);
 }
 
 .container{
@@ -131,15 +197,23 @@ nav p:hover {
 }
 
 #banner {
-    width: 100vw; /* Ocupa toda a largura da tela */
-    overflow: hidden; /* Evita rolagem lateral */
+    background-image: url("../img/banner.png");
+    background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    background-position: center;
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    width: 100%; /* Garante que o banner ocupa toda a largura */
+    height: 70vh; /* Ajuste de altura conforme necessário */
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px; /* Evita que o conteúdo fique grudado */
 }
 
+/* Estilo da imagem dentro do banner */
 #banner img {
-    width: 100%; /* Garante que a imagem não ultrapasse a tela */
-    max-width: 100%; /* Impede que a imagem ultrapasse seu contêiner */
-    height: auto; /* Mantém a proporção */
-    display: block; /* Remove espaços extras ao redor da imagem */
-    object-fit: cover; /* Ajusta a imagem ao espaço sem distorcer */
+    max-width: 40%; /* Ajuste conforme necessidade */
+    height: auto;
+    object-fit: contain; /* Garante que a imagem mantenha proporção sem cortes */
+    display: block;
 }
+
 
